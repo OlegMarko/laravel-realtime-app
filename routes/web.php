@@ -16,6 +16,7 @@ Route::get('/', function () {
 });
 
 Route::get('/start', 'StartController@index');
+Route::get('/start/get-data', 'StartController@getJSON');
 
 Auth::routes();
 
