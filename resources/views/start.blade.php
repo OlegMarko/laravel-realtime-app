@@ -49,5 +49,29 @@
             </div>
         </div>
     </div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">Circle Chart.JS</div>
+
+                <div class="card-body">
+                    <pie-chart-component></pie-chart-component>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">Random Chart.JS</div>
+
+                <div class="card-body">
+                    <random-chart-component></random-chart-component>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 @endsection

@@ -19,6 +19,8 @@ Vue.component('example-component', require('./components/ExampleComponent.vue'))
 Vue.component('prop-component', require('./components/PropComponent.vue'));
 Vue.component('ajax-component', require('./components/AjaxComponent.vue'));
 Vue.component('line-chart-component', require('./components/LineChartComponent.vue'));
+Vue.component('pie-chart-component', require('./components/PieChartComponent.vue'));
+Vue.component('random-chart-component', require('./components/RandomChartComponent.vue'));
 
 const app = new Vue({
     el: '#app'

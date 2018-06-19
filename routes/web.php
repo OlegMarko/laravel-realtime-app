@@ -18,6 +18,7 @@ Route::get('/', function () {
 Route::get('/start', 'StartController@index');
 Route::get('/start/get-data', 'StartController@getJSON');
 Route::get('/start/data-chart', 'StartController@dataChart');
+Route::get('/start/random-chart', 'StartController@randomChart');
 
 Auth::routes();
 

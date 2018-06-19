@@ -64,4 +64,31 @@ class StartController extends Controller
             ]
         ];
     }
+
+    /**
+     * Get random chart data.
+     *
+     * @return array
+     */
+    public function randomChart()
+    {
+        return [
+            'labels' => ['Mart', 'April', 'May', 'Jul', 'Jun'],
+            'datasets' => [
+                [
+                    'label' => 'v1',
+                    'backgroundColor' => '#16ab39',
+                    'data' => [
+                        mt_rand(0, 100), mt_rand(0, 100), mt_rand(0, 100), mt_rand(0, 100), mt_rand(0, 100)
+                    ]
+                ], [
+                    'label' => 'v2',
+                    'backgroundColor' => '#b5cc18',
+                    'data' => [
+                        mt_rand(0, 100), mt_rand(0, 100), mt_rand(0, 100), mt_rand(0, 100), mt_rand(0, 100)
+                    ]
+                ]
+            ]
+        ];
+    }
 }
