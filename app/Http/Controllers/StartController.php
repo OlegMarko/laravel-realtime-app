@@ -43,4 +43,25 @@ class StartController extends Controller
             ]
         ];
     }
+
+    /**
+     * Get chart data.
+     *
+     * @return array
+     */
+    public function dataChart()
+    {
+        return [
+            'labels' => ['Mart', 'April', 'May', 'Jul', 'Jun'],
+            'datasets' => [
+                [
+                    'label' => 'Sales',
+                    'backgroundColor' => '#f26202',
+                    'data' => [
+                        500, 1250, 750, 3500, 4500
+                    ]
+                ]
+            ]
+        ];
+    }
 }

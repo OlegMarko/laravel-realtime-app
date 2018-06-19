@@ -37,5 +37,17 @@
             </div>
         </div>
     </div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">Line Chart.JS</div>
+
+                <div class="card-body">
+                    <line-chart-component></line-chart-component>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 @endsection
