@@ -21,6 +21,7 @@ Vue.component('ajax-component', require('./components/AjaxComponent.vue'));
 Vue.component('line-chart-component', require('./components/LineChartComponent.vue'));
 Vue.component('pie-chart-component', require('./components/PieChartComponent.vue'));
 Vue.component('random-chart-component', require('./components/RandomChartComponent.vue'));
+Vue.component('realtime-chart-component', require('./components/RealtimeChartComponent.vue'));
 
 const app = new Vue({
     el: '#app'

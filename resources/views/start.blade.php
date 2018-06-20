@@ -73,5 +73,17 @@
             </div>
         </div>
     </div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">Real time Chart.JS</div>
+
+                <div class="card-body">
+                    <realtime-chart-component></realtime-chart-component>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 @endsection
