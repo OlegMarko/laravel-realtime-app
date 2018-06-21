@@ -85,5 +85,17 @@
             </div>
         </div>
     </div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">Real time Chat</div>
+
+                <div class="card-body">
+                    <realtime-chat-component></realtime-chat-component>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 @endsection

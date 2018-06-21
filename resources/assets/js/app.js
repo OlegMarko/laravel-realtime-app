@@ -22,6 +22,7 @@ Vue.component('line-chart-component', require('./components/LineChartComponent.v
 Vue.component('pie-chart-component', require('./components/PieChartComponent.vue'));
 Vue.component('random-chart-component', require('./components/RandomChartComponent.vue'));
 Vue.component('realtime-chart-component', require('./components/RealtimeChartComponent.vue'));
+Vue.component('realtime-chat-component', require('./components/RealtimeChatComponent.vue'));
 
 const app = new Vue({
     el: '#app'

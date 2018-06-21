@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Events\NewEvent;
+use App\Events\NewMessage;
 use Illuminate\Http\Request;
 
 class StartController extends Controller
@@ -93,6 +94,13 @@ class StartController extends Controller
         ];
     }
 
+    /**
+     * Update Chart
+     *
+     * @param Request $request
+     *
+     * @return array
+     */
     public function newEvent(Request $request)
     {
         $data = [
@@ -118,5 +126,18 @@ class StartController extends Controller
         }
 
         return $data;
+    }
+
+    /**
+     * New Message Event.
+     *
+     * @param Request $request
+     */
+    public function sendMessage(Request $request)
+    {
+        if ($message = $request->get('message')) {
+
+            event(new NewMessage($message));
+        }
     }
 }

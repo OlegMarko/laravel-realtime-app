@@ -15,11 +15,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/start', 'StartController@index');
-Route::get('/start/get-data', 'StartController@getJSON');
-Route::get('/start/data-chart', 'StartController@dataChart');
-Route::get('/start/random-chart', 'StartController@randomChart');
-Route::get('/start/new-event', 'StartController@newEvent');
+Route::group([
+    'prefix' => 'start'
+], function () {
+    Route::get('/', 'StartController@index');
+    Route::get('/get-data', 'StartController@getJSON');
+    Route::get('/data-chart', 'StartController@dataChart');
+    Route::get('/random-chart', 'StartController@randomChart');
+    Route::get('/new-event', 'StartController@newEvent');
+    Route::get('/send-message','StartController@sendMessage');
+});
+
 
 Auth::routes();
 
