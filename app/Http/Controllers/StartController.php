@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Events\NewEvent;
 use App\Events\NewMessage;
+use App\Events\PrivateMessage;
+use App\User;
 use Illuminate\Http\Request;
 
 class StartController extends Controller
@@ -25,7 +27,14 @@ class StartController extends Controller
             ]
         ];
 
-        return view('start')->with('data', $data);
+        $users = User::select('id', 'email')->where('id', '!=', auth()->id())->get();
+        $user = auth()->user();
+
+        return view('start', [
+            'data' => $data,
+            'users' => $users,
+            'user' => $user
+        ]);
     }
 
     /**
@@ -139,5 +148,19 @@ class StartController extends Controller
 
             event(new NewMessage($message));
         }
+    }
+
+    /**
+     * Send Private Message.
+     *
+     * @param Request $request
+     *
+     * @return array
+     */
+    public function sendPrivateMessage(Request $request)
+    {
+        PrivateMessage::dispatch($request->all());
+
+        return $request->all();
     }
 }

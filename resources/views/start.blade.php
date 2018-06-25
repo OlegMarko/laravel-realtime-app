@@ -97,5 +97,21 @@
             </div>
         </div>
     </div>
+
+    @if(auth()->check())
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">Real time Private Chat</div>
+
+                    <div class="card-body">
+                        <h4>{{ $user->email }}</h4>
+
+                        <socket-private-component :users="{{ $users }}" :user="{{ $user }}"></socket-private-component>
+                    </div>
+                </div>
+            </div>
+        </div>
+    @endif
 </div>
 @endsection

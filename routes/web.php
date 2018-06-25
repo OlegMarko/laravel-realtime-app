@@ -24,6 +24,7 @@ Route::group([
     Route::get('/random-chart', 'StartController@randomChart');
     Route::get('/new-event', 'StartController@newEvent');
     Route::get('/send-message','StartController@sendMessage');
+    Route::get('/send-private-message', 'StartController@sendPrivateMessage');
 });
 
 

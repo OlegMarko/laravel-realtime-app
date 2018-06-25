@@ -23,6 +23,7 @@ Vue.component('pie-chart-component', require('./components/PieChartComponent.vue
 Vue.component('random-chart-component', require('./components/RandomChartComponent.vue'));
 Vue.component('realtime-chart-component', require('./components/RealtimeChartComponent.vue'));
 Vue.component('realtime-chat-component', require('./components/RealtimeChatComponent.vue'));
+Vue.component('socket-private-component', require('./components/SocketPrivateComponent.vue'));
 
 const app = new Vue({
     el: '#app'

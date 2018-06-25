@@ -15,3 +15,14 @@ redis.on('message', function (channel, message) {
 http.listen(redisPort, function () {
     console.log('Listening on port: ' + redisPort);
 });
+
+redis.psubscribe('news-action.*');
+redis.on('pmessage', function (pattern, channel, message) {
+    message = JSON.parse(message);
+
+    io.emit(channel + ':' + message.event, message.data);
+});
+
+http.listen(redisPort, function () {
+    console.log('Listening on port: ' + redisPort);
+});
