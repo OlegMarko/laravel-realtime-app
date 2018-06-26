@@ -16,7 +16,8 @@ Route::get('/', function () {
 });
 
 Route::group([
-    'prefix' => 'start'
+    'prefix' => 'start',
+    'middleware' => 'auth'
 ], function () {
     Route::get('/', 'StartController@index');
     Route::get('/get-data', 'StartController@getJSON');
